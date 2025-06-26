@@ -7,7 +7,7 @@ import { FaGoogle, FaSignOutAlt, FaVenus, FaMars } from "react-icons/fa";
 // TODO: Replace with your Firebase config
 const firebaseConfig = {
     apiKey: "AIzaSyDJPEu6j4LSv4vI43G-Cbr9_iKtErb9pnM",
-    authDomain: "roastmyessay.games",
+    authDomain: "roastmyessay.firebaseapp.com",
     projectId: "roastmyessay",
     appId: "1:871652459681:web:e7bd3a6ad20bf05477dce0",
 };
