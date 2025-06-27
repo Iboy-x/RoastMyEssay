@@ -76,7 +76,7 @@ export default function Home() {
 
       <div className="relative min-h-screen flex flex-col items-center justify-center p-4">
         <div className="text-center mb-8">
-          <h1 className={`text-6xl font-bold mb-4 transition-all duration-500 ${
+          <h1 className={`text-4xl md:text-6xl font-bold mb-4 transition-all duration-500 ${
             isMasculineTheme
               ? 'bg-gradient-to-r from-primary to-accent'
               : 'bg-gradient-to-r from-fuchsia-400 via-indigo-400 to-rose-400'
