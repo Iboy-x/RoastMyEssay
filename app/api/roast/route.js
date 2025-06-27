@@ -1,3 +1,6 @@
+import DOMPurify from 'isomorphic-dompurify';
+import { JSDOM } from 'jsdom';
+
 export async function POST(request) {
   try {
     const { essay } = await request.json()
@@ -5,6 +8,14 @@ export async function POST(request) {
     if (!essay) {
       return new Response('Essay is required', { status: 400 })
     }
+
+    if (essay.length > 7000) {
+      return new Response('Essay is too long. Please limit to 7000 characters.', { status: 400 });
+    }
+
+    const window = new JSDOM('').window;
+    const purify = DOMPurify(window);
+    const sanitizedEssay = purify.sanitize(essay);
 
     const prompt = `You are a Gen Z college admissions officer who loves to roast college essays in a funny but helpful way. 
     Analyze this college essay and provide a response in the following JSON format (do not include markdown formatting or code blocks):
@@ -15,7 +26,7 @@ export async function POST(request) {
       "verdict": "Your one-liner verdict"
     }
     
-    Essay: ${essay}`
+    Essay: ${sanitizedEssay}`
 
     const response = await fetch('https://ai.hackclub.com/chat/completions', {
       method: 'POST',
