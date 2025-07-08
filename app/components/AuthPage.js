@@ -6,10 +6,10 @@ import { FaGoogle, FaSignOutAlt } from "react-icons/fa";
 
 // TODO: Replace with your Firebase config
 const firebaseConfig = {
-    apiKey: "AIzaSyDJPEu6j4LSv4vI43G-Cbr9_iKtErb9pnM",
-    authDomain: "roastmyessay.firebaseapp.com",
-    projectId: "roastmyessay",
-    appId: "1:871652459681:web:e7bd3a6ad20bf05477dce0",
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);
