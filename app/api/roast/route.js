@@ -28,7 +28,7 @@ export async function POST(request) {
     
     Essay: ${sanitizedEssay}`
 
-    const response = await fetch('https://ai.hackclub.com/chat/completions', {
+    const response = await fetch(process.env.AI_API_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
