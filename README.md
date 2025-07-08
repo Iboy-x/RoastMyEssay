@@ -7,67 +7,32 @@ A fun Next.js application that roasts college essays using AI. Get brutally hone
 - Paste your college essay and get an AI-powered roast
 - Receive an admission chance score
 - Get specific suggestions for improvement
-- Share your roast on WhatsApp or TikTok
+- Share your roast on WhatsApp or anywhere else.
 - Modern, Gen Z-inspired UI with Tailwind CSS
 
-## Setup
+## Why I Made This
 
-1. Clone the repository
-2. Install dependencies:
-```bash
-npm install
-```
+RoastMyEssay was created to help students get honest, entertaining, and actionable feedback on their college essays. I wanted to make the stressful process of essay writing a bit more fun and less intimidating, while still providing real suggestions for improvement. The AI roasts your essay like a Gen Z college admissions officer—brutally honest, but with a sense of humor!
 
-3. Create a `.env.local` file in the root directory and add your OpenAI API key:
-```
-OPENAI_API_KEY=your_openai_api_key_here
-```
+## How to Use
 
-4. Run the development server:
-```bash
-npm run dev
-```
+1. Go to [roastmyessay.games](https://roastmyessay.games)
+2. Paste your college essay into the text box.
+3. Click the "Roast Me" button.
+4. Read your AI-powered roast, see your admission chance score, and get specific suggestions for improvement.
+5. Share your roast with friends on WhatsApp or TikTok!
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser
-
-## Deployment
-
-The easiest way to deploy this app is using Vercel:
-
-1. Push your code to a GitHub repository
-2. Go to [Vercel](https://vercel.com)
-3. Import your repository
-4. Add your OpenAI API key in the environment variables section
-5. Deploy!
+No setup or installation required—just visit the website and start roasting your essay!
 
 ## Tech Stack
 
 - Next.js 14
 - React 18
 - Tailwind CSS
-- OpenAI API (GPT-4)
+- Firebase Authentication & Firestore
+- AI API (e.g., OpenAI-compatible endpoint)
 - React Icons
 
 ## License
 
 MIT 
-
-## Firebase Authentication Setup
-
-1. Go to [Firebase Console](https://console.firebase.google.com/) and create a new project.
-2. In your project, go to Authentication > Get Started. Enable Email/Password and Google sign-in methods.
-3. Go to Project Settings > General and find your Firebase SDK config.
-4. In `app/components/AuthPage.js`, replace the following with your actual config:
-
-```
-const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  appId: "YOUR_APP_ID",
-};
-```
-
-5. Save and restart your dev server if needed.
-
-Now, users will see a full-page login/signup screen before accessing the app. 
